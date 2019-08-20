@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thyeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Lists</title>
+</head>
+
+<h1>Task Lists</h1>
+
+<body>
+
+<a href ="/add">Add a Task</a><br />
+
+<div th:each="task : ${tasks}">
+    <h4 th:inline="text">[[${task.taskName}]] is @ '[[${task.priority}]]' Priority <br />
+    Due date is [[${task.date}]]
+    </h4>
+
+</div>
+</body>
+
+</html>
